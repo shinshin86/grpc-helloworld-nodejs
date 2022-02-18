@@ -1,0 +1,21 @@
+{
+  "scripts": {
+    "start:server": "node server-use-proto-loader.js",
+    "start:client": "node client-use-proto-loader.js",
+    "start2:server": "node server-use-gencode.js",
+    "start2:client": "node client-use-gencode.js",
+    "proto:gen": "mkdir -p gen/proto && yarn run grpc_tools_node_protoc -I. --js_out=import_style=commonjs,binary:./gen/proto --grpc_out=grpc_js:./gen/proto ./hello.proto",
+    "fmt": "prettier --write '**/*.{js,json,md}'"
+  },
+  "prettier": {
+    "singleQuote": true
+  },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.5.5",
+    "google-protobuf": "^3.19.4",
+    "grpc-tools": "^1.11.2"
+  },
+  "devDependencies": {
+    "prettier": "^2.5.1"
+  }
+}
