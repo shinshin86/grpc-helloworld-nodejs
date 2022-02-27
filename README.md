@@ -6,6 +6,9 @@ hello world sample
 
 ```sh
 yarn install
+
+# If you are using the M1 mac
+npm_config_target_arch=x64 yarn install
 ```
 
 ## Usage sample with using @grpc/proto-loader
